@@ -25,11 +25,29 @@
   line-height: 0.9rem;
   font-size: 0.7rem;
 }
+.header-user {
+  display: block;
+  padding-right: 0.1rem;
+  text-align: right;
+  overflow: hidden;
+  font-size: 0.26rem;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
 .header-btn-right {
   right: 0;
 }
 .header-btn-left {
   left: 0;
+}
+.header-log-out-btn {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  top: 1.2rem;
+  text-align: center;
+  font: 0.3rem/0.8rem "宋体";
+  background: #323436;
 }
 /* .menu a {
   text-indent: -999px;

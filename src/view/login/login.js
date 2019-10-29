@@ -6,7 +6,7 @@ import {useBack} from '../../common/hook/index';
 
 
  function LoginBox(props) {
-     console.log(props);
+    //  console.log(props);
     const [user,setUser] = useState("");
     const [password,setPassword] = useState("");
     const [vcode,setVcode] = useState("");
