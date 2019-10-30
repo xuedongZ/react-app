@@ -28,21 +28,39 @@ const routeList = [
             return <Lecturer {...props}/>
         }
     },{
-        name: '作品详情',
-        path: '/work',
+        name: "作品详情",
+        path: "/work/:id",
         exact: true,
         render(props){
-            return <Work {...props}/>
+            return <Work {...props} />
         }
     },{
-        name: '登录注册',
-        path: '/login',
+        name: "登录注册",
+        path: "/login",
         exact: true,
         render(props){
             return <Login {...props} />
         }
     }
 
-]
+];
+const nav = [
+    {
+        name: '首页',
+        path: '/',
+        exact: true,
+        className: "iconfont icon-home" 
+    },{
+        name: '课程安排',
+        path: '/course',
+        exact: true,
+        className: "iconfont icon-kecheng"
+    },{
+        name: '讲师团队',
+        path: '/lecturer',
+        exact: true,
+        className: "iconfont icon-peixunjiangshi"
+    }
+];
 
-export default routeList;
+export {nav,routeList};

@@ -1,11 +1,20 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
+import {nav} from "../../router/route_list";
 
-export default function Menu() {
+export default function Menu(props) {
     return (
-            <nav id="menu">
-                <a className="iconfont icon-home" href="/">首页</a>
-                <a className="iconfont icon-kecheng" href="/course">课程安排</a>
-                <a className="iconfont icon-peixunjiangshi" href="/lecturer">讲师团队</a>
-            </nav>
+        <nav id="menu">
+            {nav.map((item,index) => {
+                return (<NavLink 
+                    className={item.className} 
+                    to={item.path}
+                    key={index}
+                    exact={true}
+                    activeClassName={"active"} 
+                    onTouchEnd={props.menuHide}
+                    >{item.name}</NavLink>)
+            })}
+        </nav>
     )
 }
