@@ -7,7 +7,6 @@ export default function isLogin(data){
                     type: "LOGIN",
                     user: res.data.username
                  });
-                console.log(1) 
             }
          })
     }

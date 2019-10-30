@@ -11,10 +11,10 @@ function Header(props) {
     const path = props.location.pathname;
     const { user, changeShow } = props;
     const [isBtnShow, setBtnShow] = useState(false);
-    console.log(user)
+    // console.log(user)
     useEffect(() => {
         props.dispatch(isLogin());
-    }, [props])
+    },[props]);
     function getUser() {
         if (path === "/login") {
             return ""
