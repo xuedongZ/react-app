@@ -6,6 +6,21 @@ function Index(props) {
   // console.log(props);
   return (<div>
     <h1>首页</h1>
+    <h1>首页</h1>
+    <h1>首页</h1>
+    <h1>首页</h1>
+    <h1>首页</h1>
+    <h1>首页</h1>
+    <h1>首页</h1>
+    <h1>首页</h1>
+    <h1>首页</h1>
+    <h1>首页</h1>
+    <h1>首页</h1>
+    <h1>首页</h1>
+    <h1>首页</h1>
+    <h1>首页</h1>
+    <h1>首页</h1>
+    <h1>首页</h1>
     <button
       onClick={
         ()=>{
