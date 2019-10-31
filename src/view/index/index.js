@@ -3,6 +3,9 @@ import {connect} from 'react-redux';
 import Tab from "../../common/component/tab"
 import login from '../../store/action/login';
 import "../../common/css/index.css"
+import Course from './course';
+import Vip from './vip';
+import Miaov from './miaov';
 let imgData =[
   require("../../common/images/tab/img1.png"),
   require("../../common/images/tab/img2.png"),
@@ -19,6 +22,11 @@ function Index(props) {
 
       }}
     />
+    <section className="index_content">
+      <Course />
+      <Vip />
+      <Miaov />
+    </section>
   </div>
   );
 }

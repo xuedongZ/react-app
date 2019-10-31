@@ -21,7 +21,11 @@ export default function Frame(props) {
     // console.log(props)
     useEffect(() => {
         // console.log(wrap)
-        pageScroll = new BScroll(wrap.current);
+        pageScroll = new BScroll(wrap.current,{
+            preventDefaultException:{
+                tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/
+            }
+        });
     }, [])
     return (
         <div>

@@ -118,6 +118,7 @@
   position: absolute;
   left: 0.96rem;
   bottom: 0.24rem;
+  text-align: center;
 }
 .index_content .price {
   color: #f18cc4;
@@ -164,6 +165,19 @@
   font: 0.48rem / 1.2rem fzlt;
   display: block;
   color: #e15671;
+}
+.register_vip a {
+  margin: 0 auto;
+  display: block;
+  width: 4rem;
+  height: 0.93333333rem;
+  padding: 0 0.13333333rem 0.16rem 0;
+  background: url("../images/once.png") no-repeat;
+  background-size: 100% auto;
+  border: none;
+  box-sizing: content-box;
+  font: 0.45333333rem / 0.93333333rem pingfang;
+  color: #fff;
 }
 .register_vip button {
   width: 4rem;
