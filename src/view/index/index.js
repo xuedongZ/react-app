@@ -6,6 +6,7 @@ import "../../common/css/index.css"
 import Course from './course';
 import Vip from './vip';
 import Miaov from './miaov';
+import Works from './works';
 let imgData =[
   require("../../common/images/tab/img1.png"),
   require("../../common/images/tab/img2.png"),
@@ -26,6 +27,7 @@ function Index(props) {
       <Course />
       <Vip />
       <Miaov />
+      <Works />
     </section>
   </div>
   );
