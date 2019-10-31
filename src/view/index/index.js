@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import Tab from "../../common/component/tab"
+import Tab from "../../common/component/tab";
+import getWorks from "../../store/action/getWorks";
 import login from '../../store/action/login';
 import "../../common/css/index.css"
 import Course from './course';
@@ -15,7 +16,17 @@ let imgData = [
   require("../../common/images/tab/img4.png")
 ]
 function Index(props) {
-  // console.log(props);
+  const [page, setPage] = useState(1);
+  let { dispatch } = props;
+  console.log(props)
+  function getWorksData() {
+    dispatch(getWorks(page))
+  }
+  useEffect(() => {
+    getWorksData();
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
   return (
     <Frame>
       <div>
@@ -30,7 +41,7 @@ function Index(props) {
           <Course />
           <Vip />
           <Miaov />
-          <Works />
+          <Works {...props}/>
         </section>
       </div>
     </Frame>
@@ -38,4 +49,4 @@ function Index(props) {
   );
 }
 
-export default connect(props => ({...props.works}))(Index);
+export default connect(props => ({ ...props.works }))(Index);

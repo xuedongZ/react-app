@@ -13,7 +13,7 @@ export default function works(state={
             return {
                 ...state,
                 loading: false,
-                data:action.data   // 写网路请求时再调整。
+                data:state.data.concat(action.data) // 写网路请求时再调整。
             };
         case "LOADEND":
             return {
