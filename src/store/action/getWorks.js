@@ -11,10 +11,17 @@ export default function getWorks(page) {
             recommend: 1
         }).then(res => {
             // console.log(res);
+            if(!res.data.length){
+                dispatch({
+                    type: "LOADEND",
+                })
+                return false;
+            }
             dispatch({
                 type:"LOADOVER",
                 data:res.data
-            })
+            });
+           return true 
         })
     }
 }

@@ -16,11 +16,13 @@ let imgData = [
   require("../../common/images/tab/img4.png")
 ]
 function Index(props) {
-  const [page, setPage] = useState(1);
+  let [page, setPage] = useState(1);
   let { dispatch } = props;
   console.log(props)
   function getWorksData() {
-    dispatch(getWorks(page))
+    let p = dispatch(getWorks(page))
+    setPage(++page);
+    return p;
   }
   useEffect(() => {
     getWorksData();
@@ -28,7 +30,10 @@ function Index(props) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   return (
-    <Frame>
+    <Frame 
+    pullUp = {true}
+    getData = {getWorksData}
+    >
       <div>
         <Tab
           data={imgData}
