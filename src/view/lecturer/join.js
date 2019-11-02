@@ -4,7 +4,7 @@ import Tab from '../../common/component/tab';
 export default function Join() {
     const list = useRef(null);
     useEffect(()=>{
-        console.log(list.current)
+        // console.log(list.current)
         let lis = list.current.querySelectorAll("li")
         lis.forEach(item => {
             item.addEventListener('touchstart',()=>{
