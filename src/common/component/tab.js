@@ -47,10 +47,13 @@ export default function Tab(props) {
                 }
             </ul>
         </div>
-        <ul className="banner_nav">
-            {
-                    data.map((item,index)=><li key={index} className= {index===now?"active":""}></li>)
-            }
-        </ul>
+
+        {
+            data.length < 1 ?"":(<ul className="banner_nav">
+                {
+                    data.map((item,index)=><li key={index} className={index===now?"active":""}></li>)
+                }
+            </ul>)
+        }
     </div>)
 }

@@ -24,7 +24,8 @@ export default function Frame(props) {
         // console.log(wrap)
         pageScroll = new BScroll(wrap.current,{
             preventDefaultException:{
-                tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/
+                tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/,
+                className: /(^|\s)work_a(\s|$)/ 
             },
             pullUpLoad:pullUp?{threshold:200}:false,
         });

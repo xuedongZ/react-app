@@ -1,6 +1,7 @@
 import getUser from "./login"
 import works from "./works"
 import lecturers from "./lecturers"
+import work from "./work"
 function index (state={},action){
     return state
 }
@@ -8,5 +9,6 @@ function index (state={},action){
 export default {
     getUser,
     works,
-    lecturers
+    lecturers,
+    work
 }
